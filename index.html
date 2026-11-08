@@ -69,9 +69,6 @@
                 <button id="btn-tab-survey" onclick="switchTab('survey')" class="px-4 py-2 text-xs md:text-sm font-semibold rounded-lg transition-all flex items-center gap-2 bg-white text-clinical-600 shadow-sm">
                     <i data-lucide="clipboard-list" class="w-4 h-4"></i> Realizar Evaluación Anónima
                 </button>
-                <button id="btn-tab-admin" onclick="switchTab('admin')" class="px-4 py-2 text-xs md:text-sm font-semibold rounded-lg transition-all flex items-center gap-2 text-slate-600 hover:text-slate-900">
-                    <i data-lucide="lock" class="w-4 h-4"></i> Panel de Administración
-                </button>
             </div>
         </div>
     </header>
@@ -95,7 +92,7 @@
                     </div>
                     <h2 class="text-xl md:text-2xl font-bold mb-2">Evaluación del Riesgo de Diabetes a 10 Años</h2>
                     <p class="text-sm text-sky-50 leading-relaxed">
-                        Responda a las 8 preguntas oficiales de la escala FINDRISC. Esta encuesta es totalmente anónima, no solicita ningún nombre ni dato de contacto y genera un resultado clínico instantáneo.
+                        Responda a las 8 preguntas oficiales de la escala FINDRISC. <br> Esta encuesta es totalmente anónima, no solicita ningún nombre ni dato de contacto.
                     </p>
                 </div>
             </div>
@@ -355,7 +352,7 @@
                     </div>
 
                     <button type="submit" class="w-full bg-clinical-600 hover:bg-clinical-700 text-white font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-base no-print">
-                        <i data-lucide="send" class="w-5 h-5"></i> Guardar Evaluación Anónima
+                        <i data-lucide="send" class="w-5 h-5"></i> Finalizar encuesta 
                     </button>
                 </div>
 
@@ -417,7 +414,7 @@
                 <h3 class="text-xl font-bold text-slate-900 mb-1">Acceso Médico / Administrador</h3>
                 <p class="text-xs text-slate-500 mb-6">Ingrese su clave para acceder al historial de encuestas anónimas.</p>
                 <div class="space-y-3">
-                    <input type="password" id="admin-pass-input" placeholder="Contraseña (Predeterminada: admin123)" class="w-full px-4 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-clinical-500 focus:outline-none">
+                    <input type="password" id="admin-pass-input" placeholder="Contraseña" class="w-full px-4 py-2.5 text-sm border border-slate-300 rounded-xl focus:ring-2 focus:ring-clinical-500 focus:outline-none">
                     <button onclick="checkAdminAuth()" class="w-full bg-clinical-600 hover:bg-clinical-700 text-white font-semibold py-2.5 rounded-xl text-sm transition-all shadow-md">
                         Acceder al Panel
                     </button>
@@ -683,21 +680,21 @@
                 level = 'Riesgo Moderado';
                 percent = '17% de probabilidad';
                 desc = '1 de cada 6 personas desarrollará la enfermedad en los próximos 10 años.';
-                rec = 'Valore consultar con su médico para realizar analíticas sanguíneas y control de glucosa.';
+                rec = 'Consulte con su enfermera de atención primaria para establecer medidas preventivas individualizadas.';
                 barWidth = '55%';
                 barColor = 'bg-amber-500';
             } else if (total <= 20) {
                 level = 'Riesgo Alto';
                 percent = '33% de probabilidad';
                 desc = '1 de cada 3 personas desarrollará la enfermedad en los próximos 10 años.';
-                rec = 'Es muy importante solicitar consulta médica para analíticas clínicas de prevención.';
+                rec = 'Consulte con su enfermera de atención primaria para la realización de un control de salud.';
                 barWidth = '80%';
                 barColor = 'bg-rose-500';
             } else {
                 level = 'Riesgo Muy Alto';
                 percent = '50% de probabilidad';
                 desc = '1 de cada 2 personas desarrollará la enfermedad en los próximos 10 años.';
-                rec = 'Consulte con su médico a la brevedad para realizar pruebas diagnósticas oportunas.';
+                rec = 'Consulte con su enfermera de atención primaria para la realización de un control de salud.';
                 barWidth = '100%';
                 barColor = 'bg-rose-700';
             }
